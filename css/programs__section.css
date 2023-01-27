@@ -418,18 +418,20 @@
    width: 100%;
    height: 100%;
    background-color: rgba(0, 0, 0, 0.6);
+   -webkit-background-color: rgba(0, 0, 0, 0.6);
+   -o-background-color: rgba(0, 0, 0, 0.6);
+   -moz-background-color: rgba(0, 0, 0, 0.6);
    visibility: hidden;
    opacity: 0;
-   z-index: -1;
    transition: 0.2s all ease;
    -webkit-transition: 0.2s all ease;
    -o-transition: 0.2s all ease;
+   -moz-transition: 0.2s all ease;
 }
 
 .overlay__active {
    visibility: visible;
    opacity: 1;
-   z-index: 99;
 }
 
 .info__more:focus .popup__info {

@@ -1,0 +1,61 @@
+@import url(./global.css);
+
+html {
+   -webkit-text-size-adjust: none;
+   -webkit-overflow-scrolling: touch;
+}
+
+* {
+   box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+}
+
+body {
+   position: relative;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   background-color: #14171a;
+   font-family: var(--rob);
+}
+
+body::-webkit-scrollbar {
+   width: 17px;
+}
+
+body::-webkit-scrollbar-thumb {
+   background: linear-gradient(120deg, #949495 0%, #292b31 100%);
+}
+
+body::-webkit-scrollbar-track {
+   background-color: #0c1013;
+}
+
+.container {
+   max-width: 1130px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+.site__container {
+   overflow: hidden;
+}
+
+a {
+   text-decoration: none;
+   color: #000000;
+}
+
+ul,
+li {
+   list-style-type: none;
+   padding-left: 0;
+}
+
+input {
+   outline: none;
+}
+
+.stopscroll {
+   position: relative;
+   overflow: hidden;
+}

@@ -20,7 +20,7 @@
    max-height: 300px;
    overflow: hidden;
    cursor: pointer;
-   background-color: #00000083;
+   background-color: rgba(0, 0, 0, 0.6);
    opacity: 0.6;
    transition: .3s all ease;
 }

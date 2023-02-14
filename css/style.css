@@ -212,7 +212,7 @@ input {
 .main__bg {
    min-height: 1000px;
    background-image: url(../img/bg.png);
-   background-repeat: no-repeat;
+   background-repeat: repeat;
    background-size: 100%;
    margin-top: 55px;
 }

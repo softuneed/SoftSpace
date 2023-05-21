@@ -1,6 +1,6 @@
-const typeSound = new Audio('../sounds/typing.mp3');
-const typeSoundEnter = new Audio('../sounds/typing-Enter.mp3');
-const typeSoundBackspace = new Audio('../sounds/typing-Backspace.mp3');
+const typeSound = new Audio('./sounds/typing.mp3');
+const typeSoundEnter = new Audio('./sounds/typing-Enter.mp3');
+const typeSoundBackspace = new Audio('./sounds/typing-Backspace.mp3');
 const inputFocus = document.querySelector(".bar");
 let isSoundPlaying = false;
 

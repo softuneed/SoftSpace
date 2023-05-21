@@ -1,0 +1,239 @@
+.game--bg {
+   min-height: 200px !important;
+   margin-top: 65px !important;
+}
+
+.start--button {
+   background-color: #ef0fff;
+   background-image: url(../img/purple__bg.jpg);
+   background-size: contain;
+   border: none;
+   border-radius: 4px;
+   color: #ffffff;
+   min-width: 200px;
+   min-height: 50px;
+   font-size: 12px;
+   text-transform: uppercase;
+   font-weight: 600;
+   cursor: pointer;
+   transition: 0.2s all ease;
+   -webkit-transition: 0.2s all ease;
+   -o-transition: 0.2s all ease;
+   letter-spacing: 1px;
+   font-family: var(--game);
+}
+
+.start--button:hover {
+   box-shadow: #f84bb966 0px 5px,
+      #ff4ebe4d 0px 10px,
+      #f751ba33 0px 15px,
+      #fd58c01a 0px 20px,
+      #ff71cb0d 0px 25px;
+   -webkit-box-shadow: #f84bb966 0px 5px,
+      #ff4ebe4d 0px 10px,
+      #f751ba33 0px 15px,
+      #fd58c01a 0px 20px,
+      #ff71cb0d 0px 25px;
+}
+
+.game--footer {
+   margin-top: 100px !important;
+}
+
+.game {
+   width: 100%;
+   height: 350px;
+   background-color: transparent;
+   border-bottom: 2px solid #000000;
+   margin: auto;
+   background-color: rgb(234, 234, 234);
+   background-image: url(../img/road.png);
+   background-repeat: repeat-x;
+   background-size: contain;
+   background-position: bottom;
+   border-radius: 5px;
+}
+
+.gameSlide {
+   animation: slide 3.6s linear infinite;
+}
+
+@keyframes slide {
+   0% {
+      background-position: 0 100%;
+   }
+
+   100% {
+      background-position: -2000px 100%;
+   }
+}
+
+#dino {
+   width: 120px;
+   height: 70px;
+   background-image: url(../img/dino.png);
+   background-size: 120px 70px;
+   background-repeat: no-repeat;
+   position: relative;
+   top: 268px;
+}
+
+.run {
+   animation: run 0.2s infinite;
+}
+
+@keyframes run {
+   0% {
+      transform: rotate(-5deg);
+   }
+
+   50% {
+      transform: rotate(0deg);
+   }
+
+   100% {
+      transform: rotate(5deg);
+   }
+}
+
+#cactus {
+   width: 50px;
+   height: 50px;
+   background-image: url(../img/cactus.png);
+   background-size: 50px 50px;
+   position: relative;
+   top: 217px;
+   left: 95%;
+}
+
+.clouds__container {
+   max-width: 100%;
+   overflow: hidden;
+}
+
+#clouds {
+   background-image: url(../img/cloud.png);
+   background-repeat: repeat-x;
+   background-size: contain;
+   background-position: top;
+   width: 100%;
+   height: 50px;
+}
+
+.footer__text--game {
+   font-family: var(--game);
+   font-size: 11px !important;
+}
+
+.footer__header--game {
+   font-family: var(--game);
+   font-size: 14px !important;
+}
+
+#score {
+   position: absolute;
+   top: 18%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-family: var(--game);
+   text-transform: uppercase;
+   color: #32353c;
+}
+
+.cloudsMove {
+   animation: cloudsMove 125s linear infinite;
+}
+
+@keyframes cloudsMove {
+   0% {
+      background-position: 0 100%;
+   }
+
+   100% {
+      background-position: -2000px 100%;
+   }
+}
+
+.cactusMove {
+   animation: cactusMove 1.9s infinite linear;
+}
+
+@keyframes cactusMove {
+   0% {
+      left: 95%;
+   }
+
+   100% {
+      left: -20px;
+   }
+}
+
+.jump {
+   animation: jump 0.4s cubic-bezier(0.25, 0.1, 0.25, 0.5) infinite;
+}
+
+@keyframes jump {
+   0% {
+      top: 268px;
+   }
+
+   50% {
+      top: 168px;
+   }
+
+   100% {
+      top: 268px;
+   }
+}
+
+.aboutDino {
+   font-family: var(--game);
+   color: #e7eaee;
+   text-align: left;
+   margin-top: 0;
+   line-height: 1.3em;
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+}
+
+.aboutDino__text {
+   font-size: 12px;
+}
+
+.aboutDino__header {
+   font-size: 15px;
+   text-align: center;
+   padding-top: 90px;
+}
+
+
+.dino--link {
+   position: relative;
+}
+
+.dino-woodPlanks {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+}
+
+
+@keyframes fly-up-right {
+   0% {
+      opacity: 1;
+      transform: translate(0, 0);
+   }
+
+   100% {
+      opacity: 0;
+      transform: translateX(300px) translateY(-100px);
+   }
+}
+
+.plankDestroy {
+   animation-name: fly-up-right;
+   animation-duration: 0.7s;
+   animation-fill-mode: forwards;
+   animation-timing-function: cubic-bezier(0.36, 0.07, 0.19, 1.44);
+}

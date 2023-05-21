@@ -1,0 +1,82 @@
+.footer {
+   max-width: 100%;
+   max-height: 500px;
+   min-height: 200px;
+   background-color: #121019;
+   -webkit-box-shadow: 0 0 19px 2px rgb(0 0 0 / 91%);
+   box-shadow: 0 0 19px 2px rgb(0 0 0 / 91%);
+   margin-top: 120px;
+}
+
+.footer__content {
+   padding-top: 40px;
+}
+
+.footer__text {
+   font-size: 16px;
+   color: #e7eaee;
+   text-align: center;
+   margin-top: 0;
+   margin-bottom: 70px;
+}
+
+.footer__text span {
+   color: #ff224e;
+   font-weight: 500;
+}
+
+.social__links {
+   display: flex;
+   align-items: center;
+   gap: 25px;
+   margin-bottom: 0;
+   padding-bottom: 86px;
+}
+
+.footer__socials h3 {
+   color: #e7eaee;
+   margin-bottom: 10px;
+   margin-top: 35px;
+   font-weight: 500;
+}
+
+.tg-icon path,
+.whatsapp-icon path,
+.viber-icon path,
+.mail-icon path {
+   transition: 0.2s all ease;
+   -webkit-transition: 0.2s all ease;
+   -o-transition: 0.2s all ease;
+}
+
+.tg-icon:hover path {
+   fill: #2f9eff;
+}
+
+.whatsapp-icon:hover path {
+   fill: #47bb3a;
+}
+
+.viber-icon:hover path {
+   fill: #ac3abb;
+}
+
+.mail-icon:hover path {
+   fill: #ed2d2d;
+}
+
+@media (max-width: 991px) {
+   .dino--link {
+      display: none;
+   }
+}
+
+@media (max-width: 380px) {
+   .footer__text {
+      margin-bottom: 65px;
+   }
+
+   .social__links {
+      padding-bottom: 80px;
+   }
+}

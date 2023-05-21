@@ -1,0 +1,24 @@
+/** Colors **/
+:root {
+   --white: #ffffff;
+   --gradient-color-red: linear-gradient(90deg,
+         hsl(7, 89%, 46%) 15%,
+         hsl(11, 93%, 68%) 100%);
+   --gradient-color-orange: linear-gradient(90deg,
+         hsl(22, 89%, 46%) 15%,
+         hsl(54, 90%, 45%) 100%);
+   --gradient-color-yellow: linear-gradient(90deg,
+         hsl(54, 89%, 46%) 15%,
+         hsl(92, 90%, 45%) 100%);
+   --gradient-color-green: linear-gradient(90deg,
+         hsl(92, 89%, 46%) 15%,
+         hsl(92, 90%, 68%) 100%);
+   --gradient-color-primary: linear-gradient(90deg, rgba(10, 13, 31, 1) 30%, rgb(80, 12, 23) 100%);
+   --gradient-color-battery: linear-gradient(90deg, #ff0033 0%, #ff5c7c 100%);
+}
+
+/** Fonts **/
+:root {
+   --main-font: "Roboto";
+   --game: "Press Start 2P"
+}

@@ -1,0 +1,120 @@
+.battery-icon {
+   width: 32px;
+   height: 16px;
+   border: 1px solid #ff3460;
+   box-shadow: 0 0 6px #ff3460;
+   position: relative;
+   overflow: hidden;
+   border-radius: 2px;
+   text-align: center;
+   font-weight: 400;
+   font-size: 15px;
+}
+
+.battery {
+   display: inline-block;
+   position: relative;
+}
+
+.battery::before {
+   position: absolute;
+   content: '';
+   width: 3px;
+   height: 8px;
+   background-color: #ff3460;
+   top: 50%;
+   left: 104%;
+   transform: translate(-50%, -50%);
+   border-radius: 0 1px 1px 0;
+}
+
+.battery-level {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   background: var(--gradient-color-battery);
+}
+
+.charging-icon {
+   font-size: 12px;
+}
+
+.battery__wrapper {
+   display: inline-flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 15px;
+   margin-top: 20px;
+   padding: 0 9px;
+   height: 42px;
+   background: #ffffff10;
+   border: 1px solid #ffffff20;
+   border-radius: 2px;
+}
+
+.anim-red {
+   font-size: 23px;
+   background: var(--gradient-color-battery);
+   ;
+   animation: animated-low-battery 1.2s infinite alternate;
+   -webkit-background-clip: text;
+   color: transparent;
+}
+
+.anim-green {
+   font-size: 23px;
+   background: var(--gradient-color-battery);
+   animation: animated-charging-battery 1.2s infinite alternate;
+   -webkit-background-clip: text;
+   color: transparent;
+}
+
+.fullBatteryIcon {
+   font-size: 23px;
+   background: var(--gradient-color-battery);
+   -webkit-background-clip: text;
+   color: transparent;
+}
+
+@keyframes animated-low-battery {
+   0% {
+      text-shadow: none;
+   }
+
+   100% {
+      text-shadow: 0 0 10px #ff2252;
+   }
+}
+
+@keyframes animated-charging-battery {
+   0% {
+      text-shadow: none;
+   }
+
+   100% {
+      text-shadow: 0 0 10px #ff304f;
+   }
+}
+
+.icon__indicators {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.batteryTextIndicator {
+   white-space: nowrap;
+   color: #c4c4c4;
+   font-weight: 500;
+   font-size: 14px;
+}
+
+.full__battery--wrapper,
+.plug__battery--wrapper,
+.charging-icon {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}

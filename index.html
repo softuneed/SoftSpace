@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>SUN</title>
+   <link rel="apple-touch-icon" sizes="76x76" href="./img/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+   <link rel="manifest" href="./img/site.webmanifest">
+   <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5">
+   <meta name="msapplication-TileColor" content="#da532c">
+   <meta name="theme-color" content="#0C1013">
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="./css/style.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css" integrity="sha512-Z0kTB03S7BU+JFU0nw9mjSBcRnZm2Bvm0tzOX9/OuOuz01XQfOpa0w/N9u6Jf2f1OAdegdIPWZ9nIZZ+keEvBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body data-body class="body">
+
+   <div class="site__container">
+      <!-- HEADER -->
+      <header class="header" id="header">
+         <div class="navbar">
+            <div class="container">
+
+               <div class="header__nav--wrapper">
+                  <a href="./index.html"><img src="./img/Logo.png" alt="logo" class="logo"></a>
+                  <!--? враппер для бургера + поля поиска -->
+                  <div class="searchbarPlusNavlist">
+                     <!--? компоненты бургера -->
+                     <div class="burger__place">
+                        <nav class="nav__category" data-nav>
+                           <ul data-listCategory class="nav__list">
+                              <li data-f="programming" class="nav__header--item"><h3>Категории</h3></li>
+                              <li data-f="programming" class="nav__item">
+                                 <img class="programs__type--img" src="./img/all-icon.png"
+                                    style="width: 22px; height: auto;" alt="иконка">
+                                 <a href="./index.html" class="nav__item">Всё</a>
+                              </li>
+                              <li data-f="system" class="nav__item">
+                                 <img class="programs__type--img" src="./img/windows-icon.png"
+                                    style="width: 17px; height: auto;" alt="иконка">
+                                 Система 
+                              </li>
+                              <li data-f="programming" class="nav__item">
+                                 <img class="programs__type--img" src="./img/it-icon.png"
+                                    style="width: 20px; height: auto;" alt="иконка">
+                                 Программирование
+                              </li>
+                              <li data-f="icons" class="nav__item">
+                                 <img class="programs__type--img" src="./img/icon-icon.png"
+                                    style="width: 22px; height: auto;" alt="иконка">
+                                 Иконки 
+                              </li>
+                              <li data-f="wallpaper" class="nav__item">
+                                 <img class="programs__type--img" src="./img/decoration-icon.png"
+                                    style="width: 25px; height: auto;" alt="иконка">
+                                 Обои
+                              </li>
+                              <li data-f="programming" class="nav__item">
+                                 <img class="programs__type--img" src="./img/article__icon.png"
+                                    style="width: 22px; height: auto;" alt="иконка">
+                                 <a href="./html/articles.html" class="nav__item">Статьи</a>
+                              </li>
+                              <li data-f="programming" class="nav__item">
+                                 <img class="programs__type--img" src="./img/map-icon.png"
+                                    style="width: 22px; height: auto;" alt="иконка">
+                                 <a href="./html/map.html" class="nav__item">Карта</a>
+                              </li>
+                           </ul>
+                           <div class="text__box">
+                              <p class="footer__text nav__text">Проект <span>Soft Space</span> был создан для настройки, оптимизации и персонализации ОС
+                                 Windows 10/11.
+                              </p>
+                           </div>
+                           <ul class="social__links social__links--burger">
+                              <li class="telegram-link"><a href="https://t.me/xanforme" target="_blank">
+                                 <svg class="tg-icon" width="32" height="32" viewBox="0 0 41 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M36.9238 0.640604C36.3821 0.664506 35.8773 0.822309 35.4329 1.00193C35.0167 1.16937 33.4263 1.8515 30.9212 2.92576C28.414 4.00096 25.0941 5.42628 21.5527 6.9492C14.4699 9.99504 6.50702 13.4236 2.42839 15.1784C2.27502 15.2443 1.73987 15.4153 1.17188 15.8587C0.603882 16.3021 0 17.221 0 18.2448C0 19.0703 0.393446 19.8905 0.888672 20.3802C1.3839 20.8699 1.90791 21.1118 2.35677 21.2949C3.98538 21.9594 9.03641 24.0264 9.99023 24.4166C10.3259 25.445 12.1542 31.0375 12.5781 32.4082C12.8576 33.3127 13.1237 33.8792 13.4701 34.3288C13.6432 34.5535 13.8446 34.7505 14.0885 34.9049C14.1861 34.9666 14.293 35.0142 14.401 35.0579L14.4076 35.0612C14.4325 35.0712 14.4539 35.0882 14.4792 35.097C14.5268 35.1137 14.5587 35.1157 14.6224 35.1295C14.8763 35.2115 15.1326 35.263 15.3613 35.263C16.3366 35.263 16.9336 34.7259 16.9336 34.7259L16.9694 34.6998L21.9857 30.3607L28.0697 36.1159C28.1553 36.237 28.9542 37.3333 30.7161 37.3333C31.7623 37.3333 32.5922 36.8084 33.125 36.2493C33.6578 35.6903 33.9897 35.103 34.1309 34.3646V34.3613C34.2628 33.6635 39.8698 4.87889 39.8698 4.87889L39.86 4.91795C40.0242 4.16876 40.0672 3.47105 39.8861 2.78253C39.705 2.09402 39.2277 1.4348 38.6361 1.08006C38.0444 0.725397 37.4656 0.616702 36.9238 0.640604ZM36.6113 4.12368C36.6033 4.17232 36.6173 4.14786 36.6048 4.20506L36.6016 4.22459L36.5983 4.24412C36.5983 4.24412 31.0608 32.6606 30.8561 33.7428C30.8711 33.6611 30.8026 33.8236 30.7324 33.9219C30.6332 33.8534 30.4297 33.7656 30.4297 33.7656L30.3971 33.7298L22.0866 25.8685L16.2109 30.9466L17.959 23.9479C17.959 23.9479 28.8859 12.6368 29.5443 11.9785C30.0743 11.4518 30.1855 11.2682 30.1855 11.0866C30.1855 10.8432 30.0587 10.6666 29.7754 10.6666C29.5204 10.6666 29.1775 10.9146 28.9941 11.0312C26.6056 12.5538 16.1197 18.6652 11.4193 21.3991C10.6723 21.0934 5.48277 18.9691 3.72396 18.2513C3.73727 18.2454 3.73289 18.2475 3.74674 18.2415C7.82645 16.4863 15.7861 13.0578 22.8678 10.0123C26.4087 8.48964 29.7311 7.06324 32.2363 5.98891C34.703 4.93112 36.4169 4.20313 36.6113 4.12368Z" fill="#E7EAEE"/>
+                                 </svg>
+                              </a></li>
+                              <li class="mail-link"><a href="mailto:fofrakit@gmail.com" target="_blank">
+                                 <svg class="mail-icon" xmlns="http://www.w3.org/2000/svg" width="34" height="34"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                       d="M14.5 2h-13A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2zm-1.766 1L8 6.738 3.266 3h9.468zM2 13V4.646l6 4.615 6-4.616V13H2z" fill="#E7EAEE" />
+                                 </svg>
+                              </a></li>
+                           </ul>
+                        </nav>
+                     
+                        <div class="burger__align">
+                           <button class="burger" data-burger aria-label="Открыть меню" aria-expanded="false">
+                              <span class="burger__line"></span>
+                           </button>
+                        </div>
+                     </div>
+                     <!--? поле поиска и его компоненты -->
+                     <div class="search__bar">
+                        <div data-formsearch class="search__form">
+                           <input id='filter-input' type='text' class="bar" placeholder="Поиск...">
+                           <svg class="search-icon" width="21" height="23" viewBox="0 0 29 32" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path class="search__path" fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M17.922 7.4545C20.4807 10.6768 19.9427 15.3633 16.7204 17.922C13.4981 20.4807 8.81158 19.9428 6.25286 16.7204C3.69415 13.4981 4.23212 8.81162 7.45447 6.2529C10.6768 3.69419 15.3633 4.23216 17.922 7.4545ZM20.9385 19.3553C24.2951 15.2757 24.4725 9.27148 21.0545 4.9671C17.1221 0.0147002 9.91946 -0.812111 4.96706 3.12036C0.014663 7.05283 -0.812149 14.2554 3.12032 19.2078C6.49934 23.4632 12.2928 24.6726 16.9985 22.4339L23.6246 30.7786C24.4832 31.8599 26.0558 32.0404 27.1371 31.1818C28.2184 30.3232 28.3989 28.7506 27.5403 27.6693L20.9385 19.3553Z"
+                                 fill="#D3D3D3" />
+                           </svg>
+                        </div>
+                        <!-- КЭШ ПОИСКА --> 
+                        <div class="searchlist__container">
+                           <div id='container' class="search__wrapper">
+                              <a href="#autoruns" data-search class='hidden search--anchor'>Autoruns</a>
+                              <a href="#quickcpu" data-search class='hidden search--anchor'>QuickCPU</a>
+                              <a href="#park" data-search class='hidden search--anchor'>Park Control</a>
+                              <a href="#wiztree" data-search class='hidden search--anchor'>Wiz Tree</a>
+                              <a href="#processhacker" data-search class='hidden search--anchor'>Process Hacker</a>
+                              <a href="#TCPOptimizer" data-search class='hidden search--anchor'>TCP Optimizer</a>
+                              <a href="#TotalCommander" data-search class='hidden search--anchor'>Total Commander</a>
+                              <a href="#regorg" data-search class='hidden search--anchor'>Reg Organizer</a>
+                              <a href="#zeal" data-search class='hidden search--anchor'>Zealdocs</a>
+                              <a href="#sublimetext" data-search class='hidden search--anchor'>Sublime Text</a>
+                              <a href="#shutup" data-search class='hidden search--anchor'>ShutUp10++</a>
+                              <a href="#boosterX" data-search class='hidden search--anchor'>BoosterX</a>
+                              <a href="#taskbardock" data-search class='hidden search--anchor'>Taskbar Dock++</a>
+                              <a href="#wallpaperFantasy" data-search class='hidden search--anchor'>Пак фентези-обоев</a>
+                              <a href="#iconsBrowser" data-search class='hidden search--anchor'>Пак иконок для браузеров</a>
+                              <a href="#iconsAdobe" data-search class='hidden search--anchor'>Пак иконок Adobe</a>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+
+               </div>
+
+            </div>
+         </div>
+      </header>
+      <!-- MAIN -->
+      <main class="main">
+         <section class="section__programs">
+            <div class="container">
+               <!-- battery widget -->
+               <div class="battery__wrapper">
+                  <div class="battery" id="battery">
+                     <div class="battery-icon" id="battery-icon">
+                        <div class="battery-level" id="battery-level"></div>
+                     </div>
+                  </div>
+                  <div class="batteryTextIndicator"></div>
+                  <div class="icon__indicators"> 
+                  </div>
+               </div>
+                 <!-- share btn -->
+               <div id="shareButton" style="display: none;"><i class="ri-share-fill"></i></div>
+            
+               <div class="main__bg">
+                  <div class="content__indent">
+                     <section class="programs__content">
+                        <h1 class="main__header">контент</h1>
+                        <!-- autoruns -->
+                        <div class="programs__item system" id="autoruns">
+                           <div class="item__imgBox">
+                              <img src="./img/autoruns.png" alt="image" class="program__img">
+                              <span class="img__header">Autoruns</span>
+                           </div>
+                           <div class="item__info">
+                              <div class="item__infoBox">
+                                 <h3 class="info__header">AutoRunsX64 - Утилита для настройки автозапуска</h3>
+                                 <div class="programs__type system__type">
+                                    <img class="programs__type--img" src="./img/windows-icon.png"
+                                       style="width: 17px; height: auto;" alt="иконка">
+                                    Система
+                                 </div>
+                                 <p class="info__desc">Утилита способна управлять автозагрузкой программ, сервисов,
+                                    модулей, драйверов и других компонентов системы.</p>
+                                 <div class="item__btns">
+                                    <a href="./zips/zip1/Autoruns.zip" class="info__download">
+                                       скачать
+                                       <span class="download__label">2 MB</span>
+                                    </a>
+                                    <button data-link class="info__more">подробнее</button>
+                                    <div data-popup class="popup">
+                                       <div data-text id="pop" class="popup__info">
+                                          <div class="closePopupBtn" style="font-size: 20px;"><i class="fa-solid fa-xmark"></i></div>
+                                          <p data-desc>
+                                             Программа проверяет Автозагрузку, Run, RunOnce и другие секции и ключи
+                                             реестра. При желании Autoruns можно настроить на мониторинг и других
+                                             расположений, в том числе модулей Explorer, панелей управления, BHO (Browser
+                                             Helper Objects), извещений Winlogon, автоматически запускаемых служб, сервисов
+                                             и многие другие.
+                                             При помощи Autoruns можно не только контролировать автозапуск приложений, но и
+                                             отключать автозагрузку любого из них. Для этого достаточно убрать
+                                             соответствующую галочку.
+                                             Кроме настройки системы, с помощью Autoruns можно отслеживать вредоносные
+                                             программы, которые как правило, прописывают свои ключи в раздел Автозагрузки
+                                             реестра операционной системы.
+                                          </p>
+                                          <div class="pictures__subsection" data-pictures>
+                                             <img src="./img/popup_autoruns.png" alt="program screenshots" class="pictures" data-pictures>     
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- quickcpu -->
+                        <div class="programs__item system" id="quickcpu">
+                           <div class="item__imgBox">
+                              <img src="./img/QuickCpu.png" alt="image" class="program__img">
+                              <span class="img__header">QuickCPU</span>
+                           </div>
+                           <div class="item__info">
+                              <div class="item__infoBox">
+                                 <h3 class="info__header">QuickCPU - Монитор и настройка ЦП</h3>
+                                 <div class="programs__type system__type">
+                                    <img class="programs__type--img" src="./img/windows-icon.png"
+                                       style="width: 17px; height: auto;" alt="иконка">
+                                    Система
+                                 </div>
+                                 <p class="info__desc">Эта программа позволяет пользователям
+                                    точно настраивать свои процессоры для повышения производительности и эффективности. С
+                                    его помощью они могут проверять температуру, тактовую частоту ядра или регулировать
+                                    частоту по своему вкусу.</p>
+                                 <div class="item__btns">
+                                    <a href="./zips/zip1/QuickCpuSetup.zip" class="info__download">
+                                       скачать
+                                       <span class="download__label">2 MB</span>
+                                    </a>
+                                    <button data-link class="info__more">подробнее</button>
+                                    <div data-popup class="popup">
+                                       <div data-text id="pop" class="popup__info">
+                                          <div class="closePopupBtn" style="font-size: 20px;"><i class="fa-solid fa-xmark"></i></div>
+                                          <p data-desc>
+                                             Эта программа служит монитором ЦП, что также позволяет пользователям точно
+                                             настраивать свои процессоры для повышения производительности и эффективности.
+                                             С его помощью они могут проверять температуру, тактовую частоту ядра или
+                                             регулировать частоту по своему вкусу.
+                                          </p>
+                                          <div class="pictures__subsection" data-pictures>
+                                             <img src="./img/popup__quickcpu.png" alt="program screenshots" class="pictures" data-pictures>     
+                                             <img src="./img/popup__quickcpu2.png" alt="program screenshots" class="pictures" data-pictures>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- park control -->
+                        <div class="programs__item system" id="park">
+                           <div class="item__imgBox">
+                              <img src="./img/parkcontrol.png" alt="image" class="program__img">
+                              <span class="img__header">Park Control</span>
+                           </div>
+                           <div class="item__info">
+                              <div class="item__infoBox">
+                                 <h3 class="info__header">ParkControl - Распарковка ЦП</h3>
+                                 <div class="programs__type system__type">
+                                    <img class="programs__type--img" src="./img/windows-icon.png"
+                                       style="width: 17px; height: auto;" alt="иконка">
+                                    Система
+                                 </div>
+                                 <p class="info__desc">Утилита способна управлять автозагрузкой программ, сервисов,
+                                    модулей, драйверов и других компонентов системы.</p>
+                                 <div class="item__btns">
+                                    <a href="./zips/zip1/ParkControl.rar" class="info__download">
+                                       скачать
+                                       <span class="download__label">2 MB</span>
+                                    </a>
+                                    <button data-link class="info__more">подробнее</button>
+                                    <div data-popup class="popup">
+                                       <div data-text id="pop" class="popup__info">
+                                          <div class="closePopupBtn" style="font-size: 20px;"><i class="fa-solid fa-xmark"></i></div>
+                                          <p data-desc>
+                                             Утилита позволяет управлять такими параметрами работы центрального процессора:
+                                             Parking AC и DC – процентное соотношение количества ядер, которые должны
+                                             оставаться активными (незапаркованными);
+                                             Freq Scaling AC и DC – минимальная частота в процентном соотношении, с которой
+                                             должен работать процессор.
+                                             Программа окажется полезной для увеличения производительности ПК во время
+                                             запуска некоторых игр, разработчики которых некорректно реализовали парковку
+                                             ядер (например, Warface или Tera Online). Это косвенно влияет на прирост FPS,
+                                             позволяя «выжать» максимум даже со слабого компьютера с двухъядерным
+                                             процессором.
+                                          </p>
+                                          <div class="pictures__subsection" data-pictures>
+                                             <img src="./img/popup_parkcontrol.png" alt="program screenshots" class="pictures" data-pictures>     
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- wiz tree -->
+                        <div class="programs__item system" id="wiztree">
+                           <div class="item__imgBox">
+                              <img src="./img/wiztree.png" alt="image" class="program__img">
+                              <span class="img__header">Wiz Tree</span>
+                           </div>
+                           <div class="item__info">
+                              <div class="item__infoBox">
+                                 <h3 class="info__header">WizTree - Сканирование дисков</h3>
+                                 <div class="programs__type system__type">
+                                    <img class="programs__type--img" src="./img/windows-icon.png"
+                                       style="width: 17px; height: auto;" alt="иконка">
+                                    Система
+                                 </div>
+                                 <p class="info__desc">Утилита сканирует все файлы на вашем диске.</p>
+                                 <div class="item__btns">
+                                    <a href="./zips/zip1/wiztree_4_12_setup.rar" class="info__download">
+                                       скачать
+                                       <span class="download__label">4 MB</span>
+                                    </a>
+                                    <button data-link class="info__more">подробнее</button>
+                                    <div data-popup class="popup">
+                                       <div data-text id="pop" class="popup__info">
+                                          <div class="closePopupBtn" style="font-size: 20px;"><i class="fa-solid fa-xmark"></i></div>
+                                          <p data-desc>
+                                             это полезное приложение, которое сканирует ваш жесткий диск, чтобы узнать,
+                                             какие файлы занимают больше всего места.
+                                             Цель этого приложения - найти большие папки и файлы. Однако, что действительно
+                                             выделяет WizTree, так это то, как оно показывает нам это - оно использует
+                                             визуальные элементы, похожие на карты, с разными цветами и формами, которые
+                                             отображают, сколько места занимают файлы на вашем жестком диске.
+                                          </p>
+                                          <div class="pictures__subsection" data-pictures>
+                                             <img src="./img/popup__wiztree.png" alt="program screenshots" class="pictures" data-pictures>     
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- process hacker -->
+                        <div class="programs__item system" id="processhacker">
+                           <div class="item__imgBox">
+                              <img src="./img/processhacker.png" alt="image" class="program__img">
+                              <span class="img__header">Process Hacker</span>
+                           </div>
+                           <div class="item__info">
+                              <div class="item__infoBox">
+                                 <h3 class="info__header">ProcessHacker - Просмотр процессов и служб</h3>
+                                 <div class="programs__type system__type">
+                                    <img class="programs__type--img" src="./img/windows-icon.png"
+                                       style="width: 17px; height: auto;" alt="иконка">
+                                    Система
+                                 </div>
+                                 <p class="info__desc">Программа для просмотра процессов и служб, которая дает доступ к
+                                    огромному количеству подробной информации о запущенном процессе.</p>
+                                 <div class="item__btns">
+                                    <a href="./zips/zip1/processhacker-2.39-setup.zip" class="info__download">
+                                       скачать
+                                       <span class="download__label">2 MB</span>
+                                    </a>
+                                    <button data-link class="info__more">подробнее</button>
+                                    <div data-popup class="popup">
+                                       <div data-text id="pop" class="popup__info">
+                                          <div class="closePopupBtn" style="font-size: 20px;"><i class="fa-solid fa-xmark"></i></div>
+                                          <p data-desc>
+                                             Программа позволяет выполнять базовые операции, такие как завершение,
+                                             приостановление продолжение любого процесса, закрытие связанных с процессом
+                                             окон или назначение уровня приоритета.
+                                             Process Hacker предоставляет подробную информацию о всех процессах, так что вы
+                                             можете анализировать ее и решать остановить ли процесс или оставить его
+                                             работающим.
+                                             Вы даже можете связывать клики и процессы, чтобы посмотреть, как процесс будет
+                                             реагировать. Это удивительно.
+                                             Если вы желаете узнать немного больше о производительности своего компьютера,
+                                             Process Hacker хорошо подойдет для этого.
+                                          </p>
+                                          <div class="pictures__subsection" data-pictures>
+                                             <img src="./img/popup__processhacker.png" alt="program screenshots" class="pictures" data-pictures>     
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- TCP Optimizer -->
+                        <div class="programs__item system" id="TCPOptimizer">
+                           <div class="item__imgBox">
+                              <img src="./img/tcpoptimizer.png" alt="image" class="program__img">
+                              <span class="img__header">TCP Optimizer</span>
+                           </div>
+                           <div class="item__info">
+                              <div class="item__infoBox">
+                                 <h3 class="info__header">TCP Optimizer - Автоматическое ускорение интернета</h3>
+                                 <div class="programs__type system__type">
+                                    <img class="programs__type--img" src="./img/windows-icon.png"
+                                       style="width: 17px; height: auto;" alt="иконка">
+                                    Система
+                                 </div>
+                                 <p class="info__desc">Небольшая бесплатная утилита, которая поможет настроить ваше
+                                    Интернет-соединение🌐</p>
+                                 <div class="item__btns">
+                                    <a href="./zips/zip1/TCPOptimizer.zip" class="info__download">
+                                       скачать
+                                       <span class="download__label">1 MB</span>
+                                    </a>
+                                    <button data-link class="info__more">подробнее</button>
+                                    <div data-popup class="popup">
+                                       <div data-text id="pop" class="popup__info">
+                                          <div class="closePopupBtn" style="font-size: 20px;"><i class="fa-solid fa-xmark"></i></div>
+                                          <p data-desc>
+                                             Небольшая бесплатная утилита, которая поможет настроить ваше
+                                             Интернет-соединение (от модема до кабельного подключения) на максимальное
+                                             быстродействие.
+                                             Программа не требует установки, позволяет определить и установить наилучшее
+                                             значение MaxMTU, а также настроить многие другие параметры.
+                                          </p>
+                                          <div class="pictures__subsection" data-pictures>
+                                             <img src="./img/popup__tcpoptimizer.png" alt="program screenshots" class="pictures" data-pictures>     
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Total Commander -->
+                        <div class="programs__item system" id="TotalCommander">
+                           <div class="item__imgBox">
+                              <img src="./img/TotalCommander.png" alt="image" class="program__img">
+                              <span class="img__header">Total Commander</span>
+                           </div>
+                           <div class="item__info">
+                              <div class="item__infoBox">
+                                 <h3 class="info__header">Total Commander — Файловый менеджер.</h3>
+                                 <div class="programs__type system__type">
+                                    <img class="programs__type--img" src="./img/windows-icon.png"
+                                       style="width: 17px; height: auto;" alt="иконка">
+                                    Система
+                                 </div>
+                                 <p class="info__desc">Total Commander — файловый менеджер с закрытым исходным
+                                    кодом<span>🗂️</span></p>
+                                 <div class="item__btns">
+                                    <a href="./zips/zip4/TotalCommander.rar" class="info__download">
+                                       скачать
+                                       <span class="download__label">10 MB</span>
+                                    </a>
+                                    <button data-link class="info__more">подробнее</button>
+                                    <div data-popup class="popup">
+                                       <div data-text id="pop" class="popup__info">
+                                          <div class="closePopupBtn" style="font-size: 20px;"><i class="fa-solid fa-xmark"></i></div>
+                                          <p data-desc>
+                                             Total Commander - это самый мощный и стабильный файловый менеджер для Windows.
+                                             Приложение продолжает добрую традицию двухпанельных файловых менеджеров, но
+                                             отличается повышенным удобством и функциональностью, поддерживает плагины,
+                                             имеет множество встроенных полезных инструментов.
+                                             Программа обрабатывает архивы и позволяет Вам легко копировать файлы в архив и
+                                             из него. Включает в себя расширенное копирование, перемещение, переименование,
+                                             и удаление полных деревьев; поддержку drag-and-drop; утилиту запуска, которая
+                                             позволяет Вам размещать часто используемые программы в выпадающее меню;
+                                             FTP-клиент; прямой доступ к Сетевому окружению; история посещаемых директорий
+                                             и запускаемых файлов, способность разбивать большие файлы на небольшие части и
+                                             объединять их.
+                                          </p>
+                                          <div class="pictures__subsection" data-pictures>
+                                             <img src="./img/popup__totalcommander.png" alt="program screenshots" class="pictures" data-pictures>     
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- regorg -->
+                        <div class="programs__item system" id="regorg">
+                           <div class="item__imgBox">
+                              <img src="./img/reg.png" alt="image" class="program__img">
+                              <span class="img__header">Reg Organizer</span>
+                           </div>
+                           <div class="item__info">
+                              <div class="item__infoBox">
+                                 <h3 class="info__header">RegOrganizer - Очистка, ускорение, оптимизации Windows</h3>
+                                 <div class="programs__type system__type">
+                                    <img class="programs__type--img" src="./img/windows-icon.png"
+                                       style="width: 17px; height: auto;" alt="иконка">
+                                    Система
+                                 </div>
+                                 <p class="info__desc">ПО, предназначенное для полного удаления программ,
+                                    настройки автоматически запускаемых приложений, расширенной
+                                    чистки и оптимизации Windows, управления системным реестром Windows.</p>
+                                 <div class="item__btns">
+                                    <a href="./zips/zip2/regorganizer.rar" class="info__download">
+                                       скачать
+                                       <span class="download__label">25 MB</span>
+                                    </a>
+                                    <button data-link class="info__more">подробнее</button>
+                                    <div data-popup class="popup">
+                                       <div data-text id="pop" class="popup__info">
+                                          <div class="closePopupBtn" style="font-size: 20px;"><i class="fa-solid fa-xmark"></i></div>
+                                          <p data-desc>
+                                             Reg Organizer поможет удалить ненужные приложения и их следы, предотвращая
+                                             захламление реестра и дисков компьютера. Это весьма полезно, потому как далеко
+                                             не все программы удаляют за собой рабочие файлы и записи с настройками в
+                                             системном реестре.
+                                             Поможет контролировать приложения, которые запускаются вместе с операционной
+                                             системой. Таким образом вы сможете освободить ценные ресурсы для других целей
+                                             и в ряде случаев ускорить загрузку и работу операционной системы Windows.
+                                             Позволяет удалять большое количество ненужной информации и освободить место на
+                                             системном диске. С ее помощью можно удалить ненужные обновления, старые версии
+                                             Windows и многое другое.
+                                          </p>
+                                          <div class="pictures__subsection" data-pictures>
+                                             <img src="./img/popup__regorganizer.png" alt="program screenshots" class="pictures" data-pictures>  
+                                             <img src="./img/popup__regorganizer2.png" alt="program screenshots" class="pictures" data-pictures>    
+                                             <img src="./img/popup__regorganizer3.png" alt="program screenshots" class="pictures" data-pictures>       
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- zeal -->
+                        <div class="programs__item programming" id="zeal">
+                           <div class="item__imgBox">
+                              <img src="./img/zeal.jpg" alt="image" class="program__img">
+                              <span class="img__header">Zealdocs</span>
+                           </div>
+                           <div class="item__info">
+                              <div class="item__infoBox">
+                                 <h3 class="info__header">Zealdocs - Документация языков программиррования</h3>
+                                 <div class="programs__type it__type">
+                                    <img class="programs__type--img" src="./img/it-icon.png"
+                                       style="width: 20px; height: auto;" alt="иконка">
+                                    Программирование
+                                 </div>
+                                 <p class="info__desc">Оффлайн Документация практически для каждого языка
+                                    программиррования👨‍💻</p>
+                                 <div class="item__btns">
+                                    <a href="https://drive.google.com/u/0/uc?id=1UOTQrKYHNz5GrOlB8GIlfiD6Lr-FmAOU&export=download" target="_blank" class="info__download">
+                                       скачать
+                                       <span class="download__label">26 MB</span>
+                                    </a>
+                                    <button data-link class="info__more">подробнее</button>
+                                    <div data-popup class="popup">
+                                       <div data-text id="pop" class="popup__info">
+                                          <div class="closePopupBtn" style="font-size: 20px;"><i class="fa-solid fa-xmark"></i></div>
+                                          <p data-desc>
+                                             Данная программа должна быть у каждого начинающего программиста и не только, я
+                                             думаю наверняка у вас была ситуация, когда вы забывали название того или иного
+                                             тэга, параметра, функции и т.д., в Zealdocs вы сможете найти всю необходимую
+                                             для вас документацию, почти для любого языка программирования, даже без
+                                             интернета* (если прежде нужная библиотека была скачана), это намного быстрее и
+                                             эффективнее чем просто искать нужную информацию в интернете.
+                                          </p>
+                                          <div class="pictures__subsection" data-pictures>
+                                             <img src="./img/popup__zeal.png" alt="program screenshots" class="pictures" data-pictures>  
+                                             <img src="./img/popup__zeal2.png" alt="program screenshots" class="pictures" data-pictures>         
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- sublime text -->
+                        <div class="programs__item programming" id="sublimetext">
+                           <div class="item__imgBox">
+                              <img src="./img/sublime_text.png" alt="image" class="program__img">
+                              <span class="img__header">Sublime Text</span>
+                           </div>
+                           <div class="item__info">
+                              <div class="item__infoBox">
+                                 <h3 class="info__header">Sublime Text - Редактор кода</h3>
+                                 <div class="programs__type it__type">
+                                    <img class="programs__type--img" src="./img/it-icon.png"
+                                       style="width: 20px; height: auto;" alt="иконка">
+                                    Программирование
+                                 </div>
+                                 <p class="info__desc">Редактор кода с продвинутым функционалом и поддержкой множеств
+                                    языков программирования🤖</p>
+                                 <div class="item__btns">
+                                    <a href="./zips/zip3/sublime_text.rar" target="_blank" class="info__download">
+                                       скачать
+                                       <span class="download__label">18 MB</span>
+                                    </a>
+                                    <button data-link class="info__more">подробнее</button>
+                                    <div data-popup class="popup">
+                                       <div data-text id="pop" class="popup__info">
+                                          <div class="closePopupBtn" style="font-size: 20px;"><i class="fa-solid fa-xmark"></i></div>
+                                          <p data-desc>
+                                             Sublime Text - многофункциональный текстовый редактор с широким набором
+                                             удобных инструментов для выделения, маркировки и обработки текстовых
+                                             фрагментов кода.
+                                             Интерфейс этого редактора очень лаконичен. Зато скорость работы и отклика на
+                                             все Ваши действия на достаточно высоком уровне. Поддерживает огромное
+                                             количество языков (C++, Dylan, Erlang, HTML, Haskell, Java, JavaScript, Lua,
+                                             Markdown, MATLAB, Perl, PHP, Python, Ruby, SQL, XML и др.) и предлагает на
+                                             выбор около 20 цветовых схем. Весьма удобно, что реализован полноэкранный
+                                             режим - очень полезно, если не хотите, чтобы Вас что-то отвлекало от
+                                             полноценной работы. Кроме того, для Вас приготовлены так называемые
+                                             мультипанели: можно параллельно работать с несколькими файлами в одном окне,
+                                             что намного удобнее, чем использовать несколько отдельных окон.
+                                             Хочется выделить такую фишку как миникарта - в правой части редактора
+                                             расположена колонка, в которой в миниатюре расположены примерно 5-6 экранов с
+                                             текстом. Это позволяет быстро перемещаться по коду и находить нужные элементы.
+                                          </p>
+                                          <div class="pictures__subsection" data-pictures>
+                                             <img src="./img/popup__sublimetext.png" alt="program screenshots" class="pictures" data-pictures>  
+                                             <img src="./img/popup__sublimetext2.png" alt="program screenshots" class="pictures" data-pictures>         
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- shutup -->
+                        <div class="programs__item system" id="shutup">
+                           <div class="item__imgBox">
+                              <img src="./img/shutup.jpg" alt="image" class="program__img">
+                              <span class="img__header">ShutUp10++</span>
+                           </div>
+                           <div class="item__info">
+                              <div class="item__infoBox">
+                                 <h3 class="info__header">O&O ShutUp10++ - Полный контроль над функциями в Windows</h3>
+                                 <div class="programs__type system__type">
+                                    <img class="programs__type--img" src="./img/windows-icon.png"
+                                       style="width: 17px; height: auto;" alt="иконка">
+                                    Система
+                                 </div>
+                                 <p class="info__desc">Антишпионский инструмент для Windows 10-11.
+                                    Утилита предлагает вам самостоятельно решить, какие “удобные” функции
+                                    Windows 11 и 10 угрожают конфиденциальности и должны быть отключены.</p>
+                                 <div class="item__btns">
+                                    <a href="./zips/zip1/Shutup10++.zip" class="info__download">
+                                       скачать
+                                       <span class="download__label">1 MB</span>
+                                    </a>
+                                    <button data-link class="info__more">подробнее</button>
+                                    <div data-popup class="popup">
+                                       <div data-text id="pop" class="popup__info">
+                                          <div class="closePopupBtn" style="font-size: 20px;"><i class="fa-solid fa-xmark"></i></div>
+                                          <p data-desc>
+                                             O&O ShutUp10++ позволяет получить полный контроль над теми функциями Windows
+                                             10 и Windows 11, которые Вы хотите использовать и убедиться, что ваши данные
+                                             не будут отправлены третьим лицам.
+                                             При помощи простого и интуитивного интерфейса пользователь может
+                                             самостоятельно решить, какие нежелательные функции должны быть отключены для
+                                             улучшения условий конфиденциальности данных.
+                                          </p>
+                                          <div class="pictures__subsection" data-pictures>
+                                             <img src="./img/popup__shutup.png" alt="program screenshots" class="pictures" data-pictures>  
+                                             <img src="./img/popup__shutup2.png" alt="program screenshots" class="pictures" data-pictures>         
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- boosterX -->
+                        <div class="programs__item system" id="boosterX">
+                           <div class="item__imgBox">
+                              <img src="./img/popup__boosterX2.png" alt="image" class="program__img">
+                              <span class="img__header">BoosterX</span>
+                           </div>
+                           <div class="item__info">
+                              <div class="item__infoBox">
+                                 <h3 class="info__header">BoosterX - Комлпексная оптимизация Windows</h3>
+                                 <div class="programs__type system__type">
+                                    <img class="programs__type--img" src="./img/windows-icon.png"
+                                       style="width: 17px; height: auto;" alt="иконка">
+                                    Система
+                                 </div>
+                                 <p class="info__desc">Создано специально для повышения производительности.
+                                    Помогает избавиться от фризов и статтеров.
+                                    Повышает FPS до 45%.
+                                    Уменьшает системную задержку до 40%.
+                                 </p>
+                                 <div class="item__btns">
+                                    <a href="./zips/zip4/BoosterX_1.32.rar" class="info__download">
+                                       скачать
+                                       <span class="download__label">6 MB</span>
+                                    </a>
+                                    <button data-link class="info__more">подробнее </button>
+                                    <div data-popup class="popup">
+                                       <div data-text id="pop" class="popup__info">
+                                          <div class="closePopupBtn" style="font-size: 20px;"><i class="fa-solid fa-xmark"></i></div>
+                                          <p data-desc>
+                                             Каждый раз при запуске, программа моментально сканирует всю систему, не
+                                             меняя никаких настроек и не трогая ничего.
+                                             Исходя из собранных данных, BoosterX анализирует систему на уровень
+                                             оптимизации.
+                                             Есть три способа оптимизации системы. Первое – это опросник.
+                                             Исходя из собранных данных, опросник будет показывать только те
+                                             настройки, которые требуются для оптимизации.
+                                             Второй способ оптимизации проводится за пару кликов.
+                                             Необходимо выбрать один из трех режимов быстрой оптимизации. После чего,
+                                             система будет полностью оптимизирована.Третий способ – ЭКСПЕРТ МЕНЮ.
+                                             Это полный контроль над твиками и настройками системы. Программа
+                                             обновляет и показывает состояние всех настроек в системе, при этом дает
+                                             управлять всеми настройками.
+                                          </p>
+                                          <div class="pictures__subsection" data-pictures>
+                                             <img src="./img/popup__boosterX.png" alt="program screenshots" class="pictures" data-pictures>  
+                                             <img src="./img/popup__boosterX3.png" alt="program screenshots" class="pictures" data-pictures>         
+                                          </div>
+                                       </div>
+                                    </div> 
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- TaskbarDock  -->
+                        <div class="programs__item system" id="taskbardock">
+                           <div class="item__imgBox">
+                              <img src="./img/taskbardock.jpg" alt="image" class="program__img">
+                              <span class="img__header">Taskbar Dock</span>
+                           </div>
+                           <div class="item__info">
+                              <div class="item__infoBox">
+                                 <h3 class="info__header">TaskbarDock - Центрирование значков на панели задач</h3>
+                                 <div class="programs__type system__type">
+                                    <img class="programs__type--img" src="./img/windows-icon.png"
+                                       style="width: 17px; height: auto;" alt="иконка">
+                                    Система
+                                 </div>
+                                 <p class="info__desc">Одна из множества утилит для быстрого центрирования значков на
+                                    панели задач Windows.</p>
+                                 <div class="item__btns">
+                                    <a href="./zips/zip1/TaskbarDockv0.1.65.zip" class="info__download">
+                                       скачать
+                                       <span class="download__label">2 MB</span>
+                                    </a>
+                                    <button data-link class="info__more">подробнее </button>
+                                    <div data-popup class="popup">
+                                       <div data-text id="pop" class="popup__info">
+                                          <div class="closePopupBtn" style="font-size: 20px;"><i class="fa-solid fa-xmark"></i></div>
+                                          <p data-desc>
+                                             Одна из множества утилит для быстрого центрирования значков на панели задач
+                                             Windows.
+                                             В данный момент программа находится на стадии разработки.
+                                          </p>
+                                          <div class="pictures__subsection" data-pictures>
+                                             <img src="./img/popup__taskbardock.png" alt="program screenshots" class="pictures" data-pictures>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Wallpaper "Fantasy"  -->
+                        <div class="programs__item wallpaper" id="wallpaperFantasy">
+                           <div class="item__imgBox">
+                              <img src="./img/fantsasy-wallpaper.jpeg" alt="image" class="program__img">
+                              <span class="img__header img__header--wallpaper">Пак обоев</span>
+                           </div>
+                           <div class="item__info">
+                              <div class="item__infoBox">
+                                 <h3 class="info__header">Пак обоев в фентези стиле</h3>
+                                 <div class="programs__type wallpaper__type">
+                                    <img class="programs__type--img" src="./img/decoration-icon.png"
+                                       style="width: 25px; height: auto;" alt="иконка">
+                                    Обои
+                                 </div>
+                                 <p class="info__desc">Пак обоев. Стиль - игровой/фентези👾</p>
+                                 <div class="item__btns">
+                                    <a href="./zips/zip1/wallpaper-fantasy.rar" class="info__download">
+                                       скачать
+                                       <span class="download__label">2 MB</span>
+                                    </a>
+                                    <button data-link class="info__more">подробнее </button>
+                                    <div data-popup class="popup">
+                                       <div data-text id="pop" class="popup__info">
+                                          <div class="closePopupBtn" style="font-size: 20px;"><i class="fa-solid fa-xmark"></i></div>
+                                          <p data-desc>
+                                             Пак обоев из 10 штук на рабочий стол. Стиль фентези/игровой. Разрешение
+                                             1920х1080.
+                                          </p>
+                                          <div class="pictures__subsection" data-pictures>
+                                             <img src="./img/popup__wallpaper.png" alt="program screenshots" class="pictures" data-pictures>
+                                             <img src="./img/popup__wallpaper2.png" alt="program screenshots" class="pictures" data-pictures>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Icons Browser  -->
+                        <div class="programs__item icons" id="iconsBrowser">
+                           <div class="item__imgBox">
+                              <img src="./img/browser-icons.png" alt="image" class="program__img">
+                              <span class="img__header img__header--icons">Пак иконок</span>
+                           </div>
+                           <div class="item__info">
+                              <div class="item__infoBox">
+                                 <h3 class="info__header">Пак иконок для браузеров</h3>
+                                 <div class="programs__type icon__type">
+                                    <img class="programs__type--img" src="./img/icon-icon.png"
+                                       style="width: 22px; height: auto;" alt="иконка">
+                                    Иконки
+                                 </div>
+                                 <p class="info__desc">Пак иконок под все браузеры.</p>
+                                 <div class="item__btns">
+                                    <a href="./zips/zip1/BrowserIcons.rar" class="info__download">
+                                       скачать
+                                       <span class="download__label">1 MB</span>
+                                    </a>
+                                    <button data-link class="info__more">подробнее</button>
+                                    <div data-popup class="popup">
+                                       <div data-text id="pop" class="popup__info">
+                                          <div class="closePopupBtn" style="font-size: 20px;"><i class="fa-solid fa-xmark"></i></div>
+                                          <p data-desc>
+                                             Пак минималистичных иконок из 13 штук под все браузеры в нескольких
+                                             экземплярах.
+                                          </p>
+                                          <div class="pictures__subsection icons__subsection" data-pictures>
+                                             <img src="./img/popup__browse.png" alt="program screenshots" class="pictures pictures__icon" data-pictures>
+                                             <img src="./img/popup__browse2.png" alt="program screenshots" class="pictures pictures__icon" data-pictures>
+                                             <img src="./img/popup__browse3.png" alt="program screenshots" class="pictures pictures__icon" data-pictures>
+                                             <img src="./img/popup__browse4.png" alt="program screenshots" class="pictures pictures__icon" data-pictures>
+                                             <img src="./img/popup__browse5.png" alt="program screenshots" class="pictures pictures__icon" data-pictures>
+                                             <img src="./img/popup__browse6.png" alt="program screenshots" class="pictures pictures__icon" data-pictures>
+                                             <img src="./img/popup__browse7.png" alt="program screenshots" class="pictures pictures__icon" data-pictures>
+                                             <img src="./img/popup__browse8.png" alt="program screenshots" class="pictures pictures__icon" data-pictures>
+                                             <img src="./img/popup__browse9.png" alt="program screenshots" class="pictures pictures__icon" data-pictures>
+                                             <img src="./img/popup__browse10.png" alt="program screenshots" class="pictures pictures__icon" data-pictures>
+                                             <img src="./img/popup__browse11.png" alt="program screenshots" class="pictures pictures__icon" data-pictures>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Icons Adobe  -->
+                        <div class="programs__item icons" id="iconsAdobe">
+                           <div class="item__imgBox">
+                              <img src="./img/adobe__icons.png" alt="image" class="program__img">
+                              <span class="img__header img__header--icons">Пак иконок</span>
+                           </div>
+                           <div class="item__info">
+                              <div class="item__infoBox">
+                                 <h3 class="info__header">Пак иконок для программ Adobe</h3>
+                                 <div class="programs__type icon__type">
+                                    <img class="programs__type--img" src="./img/icon-icon.png"
+                                       style="width: 22px; height: auto;" alt="иконка">
+                                    Иконки
+                                 </div>
+                                 <p class="info__desc">Пак иконок под множество программ Adobe.</p>
+                                 <div class="item__btns">
+                                    <a href="./zips/zip1/Adobe Icons.rar" class="info__download">
+                                       скачать
+                                       <span class="download__label">2 MB</span>
+                                    </a>
+                                    <button data-link class="info__more">подробнее</button>
+                                    <div data-popup class="popup">
+                                       <div data-text id="pop" class="popup__info">
+                                          <div class="closePopupBtn"><i class="fa-solid fa-xmark"></i></div>
+                                          <p data-desc>
+                                             Пак иконок из 10 штук под многие программы Adobe.
+                                          </p>
+                                          <div class="pictures__subsection icons__subsection" data-pictures>
+                                             <img src="./img/popup__adobephotoshop.png" alt="program screenshots" class="pictures pictures__icon" data-pictures>
+                                             <img src="./img/popup__adobespark.png" alt="program screenshots" class="pictures pictures__icon" data-pictures>
+                                             <img src="./img/popup__iconadobeaero.png" alt="program screenshots" class="pictures pictures__icon" data-pictures>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+   
+                        <!-- показать еще -->
+                        <div class="btn-center">
+                           <button class="show-more">Показать еще</button>
+                        </div>
+                     </section>
+                  </div>
+               </div>
+            </div>
+            <!-- оверлей при открытии пункта "подробнее" -->
+            <div class="more__overlay"></div>
+         </section>
+         
+      </main>
+      <!-- FOOTER -->
+      <footer class="footer">
+         <div class="container">
+            <div class="footer__content">
+               <p class="footer__text">Проект <span>Soft Space</span> был создан для настройки, оптимизации и персонализации ОС
+                  Windows 10/11.</p>
+               <a href="./html/faq.html" class="faq__page"><span>Инструкция</span> по установке</a>
+               <div class="footer__socials">
+                  <h3>По всем вопросам и предложениям:</h3>
+                  <ul class="social__links">
+                     <li class="telegram-link"><a href="https://t.me/xanforme" target="_blank">
+                        <svg class="tg-icon" width="34" height="34" viewBox="0 0 41 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M36.9238 0.640604C36.3821 0.664506 35.8773 0.822309 35.4329 1.00193C35.0167 1.16937 33.4263 1.8515 30.9212 2.92576C28.414 4.00096 25.0941 5.42628 21.5527 6.9492C14.4699 9.99504 6.50702 13.4236 2.42839 15.1784C2.27502 15.2443 1.73987 15.4153 1.17188 15.8587C0.603882 16.3021 0 17.221 0 18.2448C0 19.0703 0.393446 19.8905 0.888672 20.3802C1.3839 20.8699 1.90791 21.1118 2.35677 21.2949C3.98538 21.9594 9.03641 24.0264 9.99023 24.4166C10.3259 25.445 12.1542 31.0375 12.5781 32.4082C12.8576 33.3127 13.1237 33.8792 13.4701 34.3288C13.6432 34.5535 13.8446 34.7505 14.0885 34.9049C14.1861 34.9666 14.293 35.0142 14.401 35.0579L14.4076 35.0612C14.4325 35.0712 14.4539 35.0882 14.4792 35.097C14.5268 35.1137 14.5587 35.1157 14.6224 35.1295C14.8763 35.2115 15.1326 35.263 15.3613 35.263C16.3366 35.263 16.9336 34.7259 16.9336 34.7259L16.9694 34.6998L21.9857 30.3607L28.0697 36.1159C28.1553 36.237 28.9542 37.3333 30.7161 37.3333C31.7623 37.3333 32.5922 36.8084 33.125 36.2493C33.6578 35.6903 33.9897 35.103 34.1309 34.3646V34.3613C34.2628 33.6635 39.8698 4.87889 39.8698 4.87889L39.86 4.91795C40.0242 4.16876 40.0672 3.47105 39.8861 2.78253C39.705 2.09402 39.2277 1.4348 38.6361 1.08006C38.0444 0.725397 37.4656 0.616702 36.9238 0.640604ZM36.6113 4.12368C36.6033 4.17232 36.6173 4.14786 36.6048 4.20506L36.6016 4.22459L36.5983 4.24412C36.5983 4.24412 31.0608 32.6606 30.8561 33.7428C30.8711 33.6611 30.8026 33.8236 30.7324 33.9219C30.6332 33.8534 30.4297 33.7656 30.4297 33.7656L30.3971 33.7298L22.0866 25.8685L16.2109 30.9466L17.959 23.9479C17.959 23.9479 28.8859 12.6368 29.5443 11.9785C30.0743 11.4518 30.1855 11.2682 30.1855 11.0866C30.1855 10.8432 30.0587 10.6666 29.7754 10.6666C29.5204 10.6666 29.1775 10.9146 28.9941 11.0312C26.6056 12.5538 16.1197 18.6652 11.4193 21.3991C10.6723 21.0934 5.48277 18.9691 3.72396 18.2513C3.73727 18.2454 3.73289 18.2475 3.74674 18.2415C7.82645 16.4863 15.7861 13.0578 22.8678 10.0123C26.4087 8.48964 29.7311 7.06324 32.2363 5.98891C34.703 4.93112 36.4169 4.20313 36.6113 4.12368Z" fill="#E7EAEE"/>
+                        </svg>
+                     </a></li>
+                     <li class="mail-link"><a href="mailto:fofrakit@gmail.com" target="_blank">
+                        <svg class="mail-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                           viewBox="0 0 16 16">
+                           <path
+                              d="M14.5 2h-13A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2zm-1.766 1L8 6.738 3.266 3h9.468zM2 13V4.646l6 4.615 6-4.616V13H2z" fill="#E7EAEE" />
+                        </svg>
+                     </a></li>
+                     <li class="dino--link">
+                        <a href="./html/dino.html">
+                           <img src="./img/dino__icon.png" alt="игра динозавр" class="dino-icon-link" style="width: 44px; height: 44px;">
+                        </a>
+                        <img src="./img/wood_planks.png" alt="игра динозавр" class="dino-woodPlanks" style="width: 66px; height: 66; cursor: pointer;">
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- FAQ fixed button -->
+      <div class="faqFixed">
+         <a href="https://t.me/xanforme" target="_blank" class="faqFixed__link pulse">Q/A</a>
+         <div class="clue">
+            <span>Есть вопросы, предложения?</span>
+         </div>
+      </div>
+      <!-- TO START fixed button -->
+      <div class="to-start">
+         <a href="#header" target="_blank">
+            <svg width="40" height="40" viewBox="0 0 68 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path
+                  d="M32.2984 1.72652C33.0783 0.450388 34.9317 0.450386 35.7115 1.72652L67.5924 53.8952C68.7187 55.7383 66.5281 57.8109 64.7501 56.5844L35.1406 36.1586C34.457 35.6869 33.553 35.6869 32.8693 36.1586L3.25978 56.5844C1.4818 57.8109 -0.708789 55.7383 0.417534 53.8952L32.2984 1.72652Z"
+                  fill="white" />
+            </svg>
+         </a>
+      </div>
+   </div>
+   <!-- scripts -->
+   <script src="./js/searchBar.js"></script>
+   <script src="./js/show-more.js"></script>
+   <script src="./js/smoothAnchor.js"></script>
+   <script src="./js/openLink.js"></script>
+   <script src="./js/fixedMenu.js"></script>
+   <script src="./js/overlay.js"></script>
+   <script src="./js/inputCleanup.js"></script>
+   <script src="./js/filter.js"></script>
+   <script src="./js/burger.js"></script>
+   <script src="./js/planks.js"></script>
+   <script src="./js/batteryLevel.js"></script>
+   <script src="./js/share.js"></script>
+   <script src="./js/keyboardPlaySound.js"></script>
+</body>
+
+</html>
